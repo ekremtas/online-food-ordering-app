@@ -95,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="anasayfa.aspx" />
+    <Content Include="general.aspx" />
+    <Content Include="general_restorant.aspx" />
+    <Content Include="images\restorantgiris.jpg" />
+    <Content Include="images\uobackground.jpg" />
     <Content Include="images\a.jpg" />
     <Content Include="images\logo.svg" />
     <Content Include="packages.config" />
@@ -111,6 +115,8 @@
   <ItemGroup>
     <Content Include="Application.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="restorant_giris.aspx" />
+    <Content Include="Restorant_uye_ol.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="uye_ol.aspx" />
@@ -131,10 +137,38 @@
     <Compile Include="Application.aspx.designer.cs">
       <DependentUpon>Application.aspx</DependentUpon>
     </Compile>
+    <Compile Include="general.aspx.cs">
+      <DependentUpon>general.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="general.aspx.designer.cs">
+      <DependentUpon>general.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="general_restorant.aspx.cs">
+      <DependentUpon>general_restorant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="general_restorant.aspx.designer.cs">
+      <DependentUpon>general_restorant.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="restorant_giris.aspx.cs">
+      <DependentUpon>restorant_giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="restorant_giris.aspx.designer.cs">
+      <DependentUpon>restorant_giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restorant_uye_ol.aspx.cs">
+      <DependentUpon>Restorant_uye_ol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restorant_uye_ol.aspx.designer.cs">
+      <DependentUpon>Restorant_uye_ol.aspx</DependentUpon>
+    </Compile>
     <Compile Include="uye_ol.aspx.cs">
       <DependentUpon>uye_ol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,0 +1,19 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="general_restorant.aspx.cs" Inherits="Yemekkutusu.general_restorant" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <h1>Restoran iç düzen sayfası</h1>
+    
+    </div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="logOut" />
+    </form>
+</body>
+</html>

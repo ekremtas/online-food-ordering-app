@@ -30,24 +30,37 @@ namespace Yemekkutusu
 
         protected void girisyap_button_Click(object sender, EventArgs e)
         {
-            //SqlCommand cmd = sqlCon.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "Select * From uye Where uye_email='"+email_TextBox.Text+"' and uye_parola='"+parola_TextBox.Text +"')";
-            //cmd.ExecuteNonQuery();
+            SqlCommand cmd = sqlCon.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from uye where uye_email='" + email_TextBox.Text + "' and uye_parola='" + parola_TextBox.Text + "'";
+            cmd.ExecuteNonQuery();
 
-            SqlDataAdapter da = new SqlDataAdapter("select * from uye where uye_email='" + email_TextBox.Text + "' and uye_parola='" + parola_TextBox.Text + "'", sqlCon);
-            da.SelectCommand.Parameters.Add("uye_email", SqlDbType.VarChar, 50);
-            da.SelectCommand.Parameters.Add("uye_parola", SqlDbType.VarChar, 30);
-            da.SelectCommand.Parameters["uye_email"].Value = email_TextBox.Text;
-            da.SelectCommand.Parameters["uye_parola"].Value = parola_TextBox.Text;
             DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Session["username"] = dr["uye_email"].ToString();
+                Response.Redirect("general.aspx");
+            }
+
+
+
+
+            //SqlDataAdapter da = new SqlDataAdapter("select * from uye where uye_email='" + email_TextBox.Text + "' and uye_parola='" + parola_TextBox.Text + "'", sqlCon);
+            //da.SelectCommand.Parameters.Add("uye_email", SqlDbType.VarChar, 50);
+            //da.SelectCommand.Parameters.Add("uye_parola", SqlDbType.VarChar, 30);
+            //da.SelectCommand.Parameters["uye_email"].Value = email_TextBox.Text;
+            //da.SelectCommand.Parameters["uye_parola"].Value = parola_TextBox.Text;
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
             if (dt.Rows.Count != 0)
             {
                 Label1.Text = "Giriş Başarılı";
             }
             else
             {
+
                 Label1.Text = "Hatalı Giriş Yaptınız!";
             }
 
