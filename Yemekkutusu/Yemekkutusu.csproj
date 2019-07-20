@@ -115,7 +115,6 @@
   <ItemGroup>
     <Content Include="Application.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="restorant_giris.aspx" />
     <Content Include="Restorant_uye_ol.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -155,13 +154,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="restorant_giris.aspx.cs">
-      <DependentUpon>restorant_giris.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="restorant_giris.aspx.designer.cs">
-      <DependentUpon>restorant_giris.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Restorant_uye_ol.aspx.cs">
       <DependentUpon>Restorant_uye_ol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

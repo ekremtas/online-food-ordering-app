@@ -38,7 +38,7 @@
     <form id="form1" runat="server">
 
         <div class="container-fluid">
-            <div class="navbar-expand-lg">
+            <div class="navbar-expand-md">
                  <nav class="navbar navbar-light bg-light">
                     <a class="navbar-brand" href="anasayfa.aspx">
                     <img src="images/logo.svg" width="30" height="30" alt="">
@@ -52,7 +52,7 @@
                         <div class="navbar-nav">
                             <a class="nav-item nav-link active" href="anasayfa.aspx">Ana Sayfa <span class="sr-only">(current)</span></a>
                             <a class="nav-item nav-link" href="uye_ol.aspx">Üye Ol</a>
-                            <a class="nav-item nav-link" href="restorant_giris.aspx">Restorant Giriş Panel</a>
+                            
                             <a class="nav-item nav-link" href="Restorant_uye_ol.aspx">Restorant Üye Ol</a>
                         </div>
                     </div>

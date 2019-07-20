@@ -11,14 +11,11 @@ namespace Yemekkutusu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Redirect("anasayfa.aspx");
-            }
-            if (Session["username"] == "uye_email")
+            if (Session["restorantname"] == null)
             {
                 Response.Redirect("general.aspx");
             }
+            
 
             Response.Write("hoigeldin");
         }
@@ -26,7 +23,7 @@ namespace Yemekkutusu
         protected void Button1_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("restorant_giris.aspx");
+            Response.Redirect("anasayfa.aspx");
         }
     }
 }

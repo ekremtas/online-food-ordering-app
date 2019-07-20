@@ -28,6 +28,8 @@ C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\bin\Microsoft.AI.Web.xml
 C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.csprojResolveAssemblyReference.cache
 C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.dll
 C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.pdb
+C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.csprojAssemblyReference.cache
+C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.csproj.CoreCompileInputs.cache
+C:\Users\Ekrem\Desktop\Yemekkutusu\Yemekkutusu\obj\Debug\Yemekkutusu.csproj.CopyComplete

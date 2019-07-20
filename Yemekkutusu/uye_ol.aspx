@@ -66,7 +66,6 @@
                         <div class="navbar-nav">
                             <a class="nav-item nav-link"  href="anasayfa.aspx">Ana Sayfa<span class="sr-only">(current)</span></a>
                             <a class="nav-item nav-link active" href="uye_ol.aspx">Üye Ol</a>
-                            <a class="nav-item nav-link" href="restorant_giris.aspx">Restorant Giriş Panel</a>
                             <a class="nav-item nav-link" href="Restorant_uye_ol.aspx">Restorant Üye Ol</a>
                         </div>
                     </div>
@@ -117,29 +116,22 @@
                             <asp:TextBox ID="adres_TextBox" required runat="server"  Class="form-control col"></asp:TextBox>
                         </div>
                          <div class="col-md" ><hr /></div> 
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                        <div class="row mt-3 col-lg">
+                                    <label for="exampleFormControlInput2" class="col-md-3">İl:</label>
+                                    <asp:DropDownList ID="DropDownList1" required runat="server" class="btn btn-light dropdown-toggle col" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect2">Example multiple select</label>
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                        <div class="row mt-3 col-lg">
+                                    <label for="exampleFormControlInput2" class="col-md-3">İlçe:</label>
+                                    <asp:DropDownList ID="DropDownList2" required runat="server" class="btn btn-light dropdown-toggle col" AutoPostBack="true" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged"></asp:DropDownList>
+
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="row mt-3 col-lg">
+                                    <label for="exampleFormControlInput2" class="col-md-3">Semt:</label>
+                                    <asp:DropDownList ID="DropDownList3" required runat="server" class="btn btn-light dropdown-toggle col" AutoPostBack="true" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged"></asp:DropDownList>
+
                         </div>
-                        
+                         <div class="col-md" ><hr /></div>       
                         <asp:Button ID="Button1" runat="server" Text="Kayıt ol" type="submit" class="btn btn-primary mb-3" OnClick="Button1_Click" />
                     </div>
                 </div>

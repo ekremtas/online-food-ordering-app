@@ -21,6 +21,14 @@ namespace Yemekkutusu
                 sqlCon.Close();
             }
             sqlCon.Open();
+            if (Session["username"] != null)
+            {
+                Response.Redirect("general.aspx");
+            }
+            else if (Session["restorantname"] != null)
+            {
+                Response.Redirect("general_restorant.aspx");
+            }
         }
 
         protected void email_TextBox_TextChanged(object sender, EventArgs e)
@@ -41,10 +49,21 @@ namespace Yemekkutusu
             foreach (DataRow dr in dt.Rows)
             {
                 Session["username"] = dr["uye_email"].ToString();
+                Session["uyeid"] = dr["uye_id"].ToString();
                 Response.Redirect("general.aspx");
             }
 
+            cmd.CommandText = "select * from restorant where restorant_email='" + email_TextBox.Text + "' and restorant_parola='" + parola_TextBox.Text + "'";
+            cmd.ExecuteNonQuery();
 
+            DataTable dk = new DataTable();
+            SqlDataAdapter das = new SqlDataAdapter(cmd);
+            das.Fill(dk);
+            foreach (DataRow dr in dk.Rows)
+            {
+                Session["restorantname"] = dr["restorant_email"].ToString();
+                Response.Redirect("general_restorant.aspx");
+            }
 
 
             //SqlDataAdapter da = new SqlDataAdapter("select * from uye where uye_email='" + email_TextBox.Text + "' and uye_parola='" + parola_TextBox.Text + "'", sqlCon);
@@ -54,7 +73,7 @@ namespace Yemekkutusu
             //da.SelectCommand.Parameters["uye_parola"].Value = parola_TextBox.Text;
             //DataTable dt = new DataTable();
             //da.Fill(dt);
-            if (dt.Rows.Count != 0)
+            if (dt.Rows.Count != 0 ||dk.Rows.Count != 0)
             {
                 Label1.Text = "Giriş Başarılı";
             }
